@@ -7,15 +7,7 @@ Base = declarative_base()
 mapper_registry = registry() # https://docs.sqlalchemy.org/en/20/orm/mapping_styles.html
 
 
-class Order(Base):
-    id = Column(Integer, primary_key=True)
 
-class OrderLine(Base):
-    id = Column(Integer, primary_key=True)
-    sku = Column(String(250))
-    qty = Integer
-    order_id = Column(Integer, ForeignKey('order.id'))
-    order = relationship(Order)
 
 
 order_lines = Table(
