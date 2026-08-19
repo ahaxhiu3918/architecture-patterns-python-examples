@@ -7,9 +7,6 @@ Base = declarative_base()
 mapper_registry = registry() # https://docs.sqlalchemy.org/en/20/orm/mapping_styles.html
 
 
-
-
-
 order_lines = Table(
     'order_lines', mapper_registry.metadata,
     Column('id', Integer, primary_key=True, autoincrement=True),
